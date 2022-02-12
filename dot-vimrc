@@ -1,0 +1,117 @@
+nnoremap <C-S> :w<CR>
+set bg=light
+nnoremap <HOME> gg0
+nnoremap <C-HOME> 0
+nnoremap <END> G$
+nnoremap <C-END> $
+
+inoremap <HOME> gg0
+inoremap <C-HOME> 0
+inoremap <END> G$
+inoremap <C-END> $
+
+set guifont=FiraCodeMedium
+nnoremap <S-CR> ggO
+nnoremap <C-CR> Go
+nnoremap <F5> :w<CR>:!clear<CR>:!python3 %<CR>
+inoremap <F5> <ESC>:w<CR>:!clear<CR>:!python3 %<CR>
+
+set backspace=indent,eol,start
+set clipboard=unnamed,unnamedplus
+
+set nocompatible
+set nu
+set relativenumber
+syntax on
+
+set expandtab
+set autoindent
+set smartindent
+set fileformat=unix
+
+set wildmenu
+set incsearch
+set nohlsearch
+
+set wildmenu
+set incsearch
+set nohlsearch
+
+set showcmd
+set showmode
+set autoread
+set spell
+highlight CursorLine guibg=lightblue ctermbg=lightblue
+
+set laststatus=2
+set ruler
+set cursorline
+
+set errorbells
+set visualbell
+
+set swapfile
+set directory=$HOME/.vim/swap-files//
+
+set backup
+set writebackup
+set backupdir=~/.vim/backup-files//
+
+set undofile
+set undodir=~/.vim/undo-files//
+"
+" Vundle setup
+set rtp+=/home/hatim/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" Plugin 'ycm-core/YouCompleteMe'
+Plugin 'puremourning/vimspector'
+Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plugin 'junegunn/fzf.vim'
+Plugin 'neoclide/coc.nvim', {'branch': 'release'}
+Plugin 'ray-x/aurora'
+Plugin 'rafalbromirski/vim-aurora'
+Plugin 'joshdick/onedark.vim'
+Plugin 'sonph/onehalf', {'rtp': 'vim/'}
+Plugin 'srcery-colors/srcery-vim'
+Plugin 'morhetz/gruvbox'
+Plugin 'preservim/tagbar'
+Plugin 'vim-scripts/indentpython.vim'
+Plugin 'jiangmiao/auto-pairs'
+Plugin 'vim-syntastic/syntastic'
+Plugin 'scrooloose/nerdtree'
+Plugin 'kien/ctrlp.vim'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'tpope/vim-surround'
+
+call vundle#end()
+filetype plugin indent on
+" Vundle setup done!
+
+colorscheme gruvbox
+let python_hightlight_all=1
+let g:ycm_clangd_binary_path="/usr/bin/clangd"
+let g:airline_powerline_fonts = 1
+let g:airline_theme='luna'
+
+nnoremap <silent> <F8> :TagbarToggle<CR>
+
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+
+" use <tab> for trigger completion and navigate to the next complete item
+function! s:check_back_space() abort
+let col = col('.') - 1
+return !col || getline('.')[col - 1]  =~ '\s'
+endfunction
+
+inoremap <silent><expr> <Tab>
+\ pumvisible() ? "\<C-n>" :
+\ <SID>check_back_space() ? "\<Tab>" :
+\ coc#refresh()
+packadd! vimspector
+let g:vimspector_enable_mappings = 'HUMAN'
+let g:python3_host_prog = '/usr/local/bin/python3.10'
+nnoremap <C-S-F10> <Plug>VimspectorStepOver
