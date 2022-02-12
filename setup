@@ -1,0 +1,51 @@
+sudo apt update
+[sudo apt upgrade]
+zsh
+curl
+tmux
+btop
+powerline fonts: sudo apt-get install fonts-powerline
+
+fsearch:
+sudo apt install git build-essential automake autopoint autoconf libtool pkg-config intltool autoconf-archive libicu-dev libpcre3-dev libglib2.0-dev libgtk-3-dev libxml2-utils
+./autogen.sh
+./configure
+make && make install
+
+git
+
+autoconf
+
+gnu readline
+
+clangd
+gcc
+g++
+make
+git
+GitHub CLI: 
+curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/etc/apt/trusted.gpg.d/githubcli-archive-keyring.gpg
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/trusted.gpg.d/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
+sudo apt update
+sudo apt install gh
+
+Python
+compile python3.10 from source
+needed tools:
+sudo apt install libssl-dev zlib1g-dev libncurses5-dev \
+libncursesw5-dev libreadline-dev libsqlite3-dev libgdbm-dev \
+libdb5.3-dev libbz2-dev libexpat1-dev liblzma-dev libffi-dev python3-dev
+ipython
+install pip (pythonX.Y -m ensurepip --user)
+
+VSCode
+neovim
+coc.nvim language servers: coc-clangd/ccls coc-pyright coc-rust-analyzer/coc-rls coc-go
+
+rust:
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+rust language server: 
+rustup update
+rustup component add rls rust-analysis rust-src
+Nerd fonts
