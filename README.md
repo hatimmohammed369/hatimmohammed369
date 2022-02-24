@@ -1,10 +1,16 @@
 - 👋 Hi, I'm Hatim Muhammed
 - 👀 I’m interested in:
+
 Python
+
 CPython
+
 Linux Kernel
+
 Javascript
+
 Rust
+
 Golang
 - 🌱 I’m currently learning:
 Python
