@@ -13,13 +13,19 @@ Rust
 
 Golang
 - 🌱 I’m currently learning:
+
 Python
+
 Rust
+
 JavaScript
+
 - 💞️ I’m looking to collaborate on a Python project
 - 📫 How to reach me:
+
 hatimmohammed369@gmail.com
 marshallriemann@gmail.com
+
 hatim369 on twitter
 
 I'M CURRENTLY MAKING MY OWN PROGRAMMING LANGUAGE
